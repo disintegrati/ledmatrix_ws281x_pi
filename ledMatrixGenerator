@@ -2,15 +2,26 @@
 read -p "Inizio da " inizio
 read -p "Numero di colonne " colonne
 read -p "Numero di Righe " righe
-x=$inizio
-echo $x
-sup=29
-inf=1
+a=$inizio
+spazio=$(($righe*2))
 
+b=$((inizio+1))
+pari=$(($spazio-$b))
+dispari=$((spazio+inizio))
+x=$((spazio+inizio))
+y=$((pari+spazio))
+
+echo $pari
+echo $dispari
+echo "--------------------------"
+echo $inizio
+echo $pari
+echo $dispari
+echo $y
 for (( c=0; c<$((colonne / 2)); c++))
 	do
-	x=$((x + sup))
+	x=$((spazio+x))
 	echo $x
-	x=$((x + inf))
-	echo $x
+	y=$((spazio+y))
+	echo $y
 	done

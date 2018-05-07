@@ -1,0 +1,16 @@
+#!/bin/bash
+read -p "Inizio da " inizio
+read -p "Numero di colonne " colonne
+read -p "Numero di Righe " righe
+x=$inizio
+echo $x
+sup=29
+inf=1
+
+for (( c=0; c<$((colonne / 2)); c++))
+	do
+	x=$((x + sup))
+	echo $x
+	x=$((x + inf))
+	echo $x
+	done
